@@ -1,0 +1,14 @@
+if [ $# -ne 2 ]; then
+  echo "Usage: $0 <model_name> <log_file_path>"
+  exit 1
+fi
+
+MODEL_NAME=$1
+LOG_FILE=$2
+
+if [ ! -f "$LOG_FILE" ]; then
+  echo "Error: Log file does not exist."
+  exit 1
+fi
+
+grep -E "$MODEL_NAME.*(WARNING|ERROR|CRITICAL)" "$LOG_FILE"
