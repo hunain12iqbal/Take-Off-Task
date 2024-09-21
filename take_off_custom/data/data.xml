@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <record id="take_off_custom_partner" model="res.partner">
+            <field name="name">Hunain</field>
+            <field name="street">B1/4 Near Airport Star Gate</field>
+            <field name="city">Karachi</field>
+            <field name="country_id" ref="base.us"/> <!-- Assuming USA -->
+            <field name="email">hunainiqbal468@gmail.com</field>
+            <field name="phone">+923110836829</field>
+        </record>
+    
+        <record id="take_off_custom_product_template" model="product.template">
+            <field name="name">Shoes</field>
+            <field name="type">consu</field> <!-- consumable type -->
+            <field name="list_price">10.00</field>
+            <field name="standard_price">5.00</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/> <!-- Unit of measure -->
+            <field name="uom_po_id" ref="uom.product_uom_unit"/> <!-- Purchase unit of measure -->
+        </record>
+    
+       
+        
+    
+    </data>
+    
+
+</odoo>
